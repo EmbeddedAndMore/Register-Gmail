@@ -1,5 +1,6 @@
 source env/bin/activate
 pip install -r requirements.txt
-cd First
+cd LoginGmail
 ./manage.py createsuperuser
 ./manage.py runserver
+
