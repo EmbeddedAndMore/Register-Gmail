@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from .forms import UserRegistrationForm
+from django.contrib import messages
 
 
 class HomeView(View):
