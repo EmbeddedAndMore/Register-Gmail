@@ -9,7 +9,7 @@
         {% else %}
              <a class="nav-link active"  href="{% url 'accounts:user_register' %}">Register</a>
              <a class="nav-link active"  href="{% url 'accounts:user_login' %}">Login</a>
-             <a class="nav-link active" aria-current="page" href="#">Login With Google</a>
+             <a class="btn btn-info" aria-current="page" href="{% url 'social:begin' 'google-oauth2' %}">Login/Signup With Google</a>
         {% endif %}
       </div>
   </div>
