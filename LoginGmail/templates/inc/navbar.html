@@ -2,9 +2,15 @@
   <div class="container-fluid">
 
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link active" aria-current="page" href="#">Login</a>
-
+          <br>
+        {% if request.user.is_authenticated %}
+             <p style="color:red">Hi : {{ user.username }}</p>
+             <a class="nav-link active"  href="#">Logout</a>
+        {% else %}
+             <a class="nav-link active"  href="{% url 'accounts:user_register' %}">Register</a>
+             <a class="nav-link active"  href="{% url 'accounts:user_login' %}">Login</a>
+             <a class="nav-link active" aria-current="page" href="#">Login With Google</a>
+        {% endif %}
       </div>
   </div>
 </nav>
