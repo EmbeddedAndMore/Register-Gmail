@@ -46,3 +46,9 @@ class UserLoginView(View):
             return render(request, 'accounts/login.html', {'form': form})
 
 
+class UserLogoutView(View):
+    def get(self, request):
+        logout(request)
+        messages.success(request, 'Logged out Successfully', 'success')
+        return redirect('accounts:home')
+
